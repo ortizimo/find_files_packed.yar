@@ -1,6 +1,6 @@
 import "pe"
 
-rule find_files_packed
+rule find_packed_files
 {					
 	meta:
 		author = "Saulo 'Sal' Ortiz, Sr. Cyber Forensics Analyst, ATG"
