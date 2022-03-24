@@ -1,0 +1,20 @@
+import "pe"
+
+rule find_files_packed
+{					
+	meta:
+		author = "Saulo 'Sal' Ortiz, Sr. Cyber Forensics Analyst, ATG"
+		description = "Simple rule to find packed files"
+    re ="
+		date = "2022-03-24"
+    note = "not all inclusive...let me know if you find others"
+						
+	strings:
+		$a1 = {0D 09 02 08 DE BC BC 6B AD AD 19 41} 				// UPX	
+		$a2 = {83 1C EC 24 6A 01} 									// FSG 	
+		$a3 = {41 BC D6 3A DA D8} 									// Upack 
+		$a4 = {20 03 C3 B2 99 11 A2 80 33 C7 9C F5 93 93 87 21}		// ASPack
+	
+	condition:
+		any of ($a*)
+}
