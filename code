@@ -5,7 +5,7 @@ rule find_files_packed
 	meta:
 		author = "Saulo 'Sal' Ortiz, Sr. Cyber Forensics Analyst, ATG"
 		description = "Simple rule to find packed files"
-    		reference: "https://github.com/ortizimo/caddywiper_opcode.yar/blob/main/code
+    		reference: "https://github.com/ortizimo/find_files_packed.yar/blob/main/code"
 		date = "2022-03-24"
     		note = "not all inclusive...let me know if you find others"
 						
